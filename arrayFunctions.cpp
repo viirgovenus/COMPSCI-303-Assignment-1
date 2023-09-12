@@ -22,8 +22,16 @@ bool checkInt(int arr[], int size, int num){
 // for an index that is out of bounds
 
 void modifyVal(int arr[], int index, int &newInt, int &oldInt){
-    oldInt = arr[index];
-    arr[index] = newInt;
+ try {
+    if (index >= 0 && index < arr[index]) {
+        oldInt = arr[index];
+        arr[index] = newInt;
+    } else {
+        throw std::out_of_range("The index is out of bounds.");
+    }
+ } catch (const std::out_of_range &ex) {
+    std::cerr << "Error: " << ex.what() << std::endl;
+ }
 }
 
 // A function that adds a new integer to the end of the array
