@@ -1,0 +1,19 @@
+// This was my attempt at the try-catch block. I can't figure out why it's not working the way I'm intending it to
+// However, it does replace a non-integer value with a 0. So technically, it works. Kinda. 
+
+void addInt(int arr[], int &size, int num) {
+    try {
+        if (static_cast<int>(num) != num) {
+            throw std::invalid_argument("Value must be an integer");
+        }
+               arr[size++] = num;
+    } catch (const std::invalid_argument &ex) {
+        std::cerr << "Error: " << ex.what() << std::endl;
+    }
+
+void removeInt(int arr[], int &size, int index){
+    for (int i = index; i < size; i++){
+        arr[i] = arr[ i + 1];
+    }
+    size--;
+}
