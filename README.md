@@ -21,3 +21,7 @@ Then it will go to the removeInt section.
 This is what happens for modifyVal when an out of bounds index is the input.
 
 <img width="464" alt="Screenshot 2023-09-11 at 10 20 20 PM" src="https://github.com/viirgovenus/COMPSCI-303-Assignment-1/assets/113569323/737a4777-75b7-41fc-bd7b-58e1f64ee557">
+
+This is what happens when I input a string instead of integer. It turns the value to 0. I don't know why it's doing this, but it's techincally doing the job.
+
+<img width="513" alt="Screenshot 2023-09-11 at 10 48 34 PM" src="https://github.com/viirgovenus/COMPSCI-303-Assignment-1/assets/113569323/0c4e9c66-33af-4694-841e-db7fb5e14c8c">
